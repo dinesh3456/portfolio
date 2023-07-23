@@ -26,7 +26,7 @@
         justify-content: space-around;
         align-items: center;
         height: 80px;
-        background-color: rgb(34, 32, 32);
+        background-color: rgb(31, 31, 31);
       }
       nav ul {
         display: flex;
@@ -36,18 +36,32 @@
         list-style: none;
         margin: 0 25px;
       }
+      nav ul li a {
+        text-decoration: none;
+        color: white;
+      }
+      nav ul li a:hover {
+        color: lavenderblush;
+        font-size: 1.07rem;
+      }
+      main hr {
+        border: 0;
+        background: rgb(199, 194, 194);
+        height: 1.2px;
+        margin: 40px 84px;
+      }
       .left {
         font-size: 1.3rem;
-        margin-right: 600px;
+        margin-right: 450px;
       }
       .firstSection {
         display: flex;
         justify-content: space-around;
-        margin: 80px 0;
+        margin: 125px 0;
         align-items: center;
       }
       .firstSection > div {
-        width: 30%;
+        width: 34%;
       }
       .leftSection {
         font-size: 2.7rem;
@@ -59,18 +73,72 @@
       .purple {
         color: rgb(66, 8, 125);
       }
+      .whatdone {
+        color: grey;
+      }
+      #element {
+        color: rgb(66, 8, 125);
+      }
+      .secondSection {
+        max-width: 80vw;
+        margin: auto;
+        height: 80vh;
+      }
+      .secondSection h1 {
+        font-size: 1.8rem;
+      }
+
+      .secondSection .box {
+        background-color: rgb(195, 189, 189);
+        width: 70vw;
+        height: 1.5px;
+        margin: 55px 0;
+        display: flex;
+        
+      }
+      .secondSection .vertical1 {
+        height: 90px;
+        width: 2px;
+        background-color: white;
+        margin: 0 120px 0 37px;      }
+      .secondSection .vertical2 {
+        height: 90px;
+        width: 2px;
+        background-color: white;
+        margin: 0 120px 0 190px;
+
+      }
+      .image-top {
+        width: 40px;
+        position: relative;
+        top: -42px;
+        left: -20px;
+      }
+      .vertical-title {
+        position: relative;
+        top: 60px;
+        width: 290px;
+      }
+      .vertical_desc {
+        position: relative;
+        top: 86px;
+        color: aliceblue;
+        width: 290px;
+        font-size: 10px;
+      }
     </style>
   </head>
   <body>
     <header>
       <nav>
-        <div class="left">Dinesh Ravishankar's Portfolio</div>
+        <div class="left">Dinesh's Portfolio</div>
         <div class="right">
           <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Services</li>
-            <li>Projects</li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/">About</a></li>
+            <li><a href="/">Services</a></li>
+            <li><a href="/">Projects</a></li>
+            <li><a href="/">Contact</a></li>
           </ul>
         </div>
       </nav>
@@ -78,15 +146,60 @@
     <main>
       <section class="firstSection">
         <div class="leftSection">
-          Hi, This is <span class="purple">Dinesh Ravishankar</span>
+          Hi, My name is <span class="purple">Dinesh </span>
           <div>and I am a</div>
-          <div>web3 developer</div>
+
+          <span id="element"></span>
         </div>
         <div class="rightSection">
           <img src="src/bg.png" alt="" />
         </div>
       </section>
+      <hr />
+      <section class="secondSection">
+        <span class="whatdone">What I have done so far</span>
+        <h1>Work Experience</h1>
+        <div class="box">
+          <div class="vertical1">
+            <img src="src/dev.png" class="image-top" />
+            <div class="vertical-title">
+              Intern at CloudBeaver
+              <div>(JUN 22'-JUL 22')</div>
+            </div>
+            <div class="vertical_desc">
+              During my internship at CloudBeaver, I learned Azure, assisted
+              with scheduling and content preparation, actively participated in
+              live sessions, and provided technical support to participants.
+            </div>
+          </div>
+          <div class="vertical2">
+            <img src="src/dev.png" class="image-top" />
+            <div class="vertical-title">
+              Student Intern at Intershala
+              <div>(FEB 23'-MAR 23')</div>
+            </div>
+            <div class="vertical_desc">
+              During my Internshala internship, I sharpened my communication
+              skills by engaging with fellow college students. Active
+              participation in live sessions and content preparation further
+              developed organizational abilities. The
+              experience provided me invaluable soft skills to connect with
+              others.
+            </div>
+          </div>
+          
+        </div>
+      </section>
     </main>
+    <!-- Setup and start animation! -->
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed("#element", {
+        strings: ["Web3 Developer", "Blockchain Developer", "Content Creator"],
+        typeSpeed: 50,
+      });
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
